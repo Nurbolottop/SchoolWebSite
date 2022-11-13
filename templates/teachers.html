@@ -1,0 +1,79 @@
+{% extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+      <div class="wrapper">
+         {% include 'header.html'%}
+         <!--header end-->
+         {% include 'responsive.html'%}
+         <!--responsive-menu end-->
+         <section class="pager-section">
+            <div class="container">
+               <div class="pager-content text-center">
+                  <h2> Мугалимдер</h2>
+                  <ul>
+                     <li><a href="#" title="">Башки бет</a></li>
+                     <li><span> Мугалимдер</span></li>
+                  </ul>
+               </div>
+               <!--pager-content end-->
+               <h2 class="page-titlee">{settings.name_site}</h2>
+            </div>
+         </section>
+         <!--pager-section end-->
+         <section class="page-content">
+            <div class="container">
+               <div class="teachers-section p-0">
+                  <div class="teachers">
+                     <div class="row">
+                        {%for teacher in teacher%}
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-6 full-wdth">
+                          
+                           <div class="teacher">
+                              <div class="teacher-img">
+                                 <img src="{{teacher.image.url}}" alt="" class="w-100">
+                                 <div class="sc-div">
+                                    <ul>
+                                       <li><a href="{{teacher.facebook}}" title=""><i class="fab fa-instagram"></i></a></li>
+                                       <li><a href="{{teacher.whatsapp}}" title=""><i class="fab fa-whatsapp"></i></a></li>
+                                       <li><a href="{{teacher.instagram}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+                                    </ul>
+                                    <span><img src="{%static 'assets/img/plus.png'%}" alt=""></span>
+                                 </div>
+                              </div>
+                              <div class="teacher-info">
+                                 <h3><a href="{% url 'teacher_single' teacher.id%}" title="">{{teacher.name}}</a></h3>
+                                 <span>{{teacher.work}}</span>
+                              </div>
+
+                           </div>
+                          
+
+                           <!--teacher end-->
+                        </div>
+                        {%endfor%}
+                     </div>
+                  </div>
+                  <!--teachers end-->
+               </div>
+               <!--teachers-section end-->
+               <div class="mdp-pagiation">
+                  <nav aria-label="Page navigation example">
+                     <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link active" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">15</a></li>
+                     </ul>
+                  </nav>
+               </div>
+               <!--pagination-end-->
+            </div>
+         </section>
+         <!--page-content end-->
+         
+         <!--newsletter-sec end-->
+         {% include 'footer.html'%}
+         <!--footer end-->
+{%endblock%}

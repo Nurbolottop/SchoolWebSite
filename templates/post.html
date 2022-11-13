@@ -1,0 +1,59 @@
+{%extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+      <div class="wrapper">
+         {%include 'header.html'%}
+         <!--header end-->
+         {%include 'responsive.html'%}
+         <!--responsive-menu end-->
+         <section class="pager-section blog-version">
+            
+            <div class="container">
+              
+               <div class="pager-content text-center">
+                
+                  <ul>
+                     <li><a href="{% url 'index'%}" title="">Башкы бет</a></li>
+                     <li><a href="{% url 'new_site'%}" title="">Жанылыктар</a></li>
+                     <li><span>{{new.name}}</span></li>
+                  </ul>
+                  <h2>{{new.name}}</h2>
+                  <span class="categry">{{new.language}}</span>
+                  <ul class="meta">
+                     <li><a href="#" title="">{{new.created_news}}</a></li>
+
+                  </ul>
+               </div>
+               <!--pager-content end-->
+            </div>
+         </section>
+         <!--pager-section end-->
+         <section class="page-content p80">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-8">
+                     <div class="blog-post single">
+                      <img src="{{new.image.url}}"  width = '100px' length ='100px' alt="" class="w-100">
+                      
+                      <p></p>
+                        <div class="pager-content text-center">
+
+                        
+                        </div>
+                      
+                      <p>{{new.desc}}</p>
+
+
+                     </div>
+                     <!--blog-post single end-->
+                  
+                     <!--mdp-contact end-->
+                  </div>
+                  
+               </div>
+            </div>
+         </section>
+         
+         <!--newsletter-sec end-->
+         {%include 'footer.html'%}
+{%endblock%}

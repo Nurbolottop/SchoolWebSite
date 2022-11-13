@@ -1,0 +1,102 @@
+{% extends 'homepage.html'%}
+{%load static %}
+{%block content%}
+      <div class="wrapper">
+         {%include 'header.html'%}
+         <!--header end-->
+         {% include 'responsive.html'%}
+         <!--responsive-menu end-->
+         <section class="pager-section">
+            <div class="container">
+               <div class="pager-content text-center">
+                  <h2>Байланыштар</h2>
+                  <ul>
+                     <li><a href="#" title="">Башкы бет</a></li>
+                     <li><span>Байланыштар</span></li>
+                  </ul>
+               </div>
+               <!--pager-content end-->
+               <h2 class="page-titlee">{{setting.name_site}}</h2>
+            </div>
+         </section>
+         <!--pager-section end-->
+         <section class="page-content">
+            <div class="container">
+               <div class="mdp-map"><iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe></div>
+               <!--mdp-map end-->
+               <div class="mdp-contact">
+                  <div class="row">
+                     <div class="col-lg-8 col-md-7">
+                        <div class="comment-area">
+                           <h3>Комментарий кошуу</h3>
+                           <form method="POST">
+                              {%csrf_token %}
+
+                              <div class="row">
+                                 <div class="col-lg-6">
+                                    <div class="form-group"><input type="text" name="name" class="name" placeholder="Аты"></div>
+                                    <!--form-group end-->
+                                 </div>
+                                 <div class="col-lg-6">
+                                    <div class="form-group"><input type="email" name="email" class="email" placeholder="Почтасы" ></div>
+                                    <!--form-group end-->
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="form-group"><textarea name="message" placeholder="Кабар"></textarea></div>
+                                    <!--form-group end-->
+                                 </div>
+                                 <div class="col-lg-12">
+                                    <div class="form-submit"><button type="submit"  class="btn-default">Азыр тапшырыңыз   <i class="fa fa-long-arrow-alt-right"></i></button></div>
+                                    <!--form-submit end-->
+                                 </div>
+                              </div>
+                           </form>
+                        </div>
+                        <!--comment-area end-->
+                     </div>
+                     <div class="col-lg-4 col-md-5">
+                        <div class="mdp-our-contacts">
+                           <h3>Наши контакты</h3>
+                           <ul>
+                              <li>
+                                 <div class="d-flex flex-wrap">
+                                    <div class="icon-v"><img src="{%static 'assets/img/icon15.png'%}" alt=""></div>
+                                    <div class="dd-cont">
+                                       <h4>Тел.ном</h4>
+                                       <span>{{contact.call}}</span>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="d-flex flex-wrap">
+                                    <div class="icon-v"><img src="{%static 'assets/img/icon16.png'%}" alt=""></div>
+                                    <div class="dd-cont">
+                                       <h4>Иш убактысы</h4>
+                                       <span>{{contact.work_site}} {{contact.work2_site}}</span>
+                                    </div>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="d-flex flex-wrap">
+                                    <div class="icon-v"><img src="{%static 'assets/img/icon17.png'%}" alt=""></div>
+                                    <div class="dd-cont">
+                                       <h4>Адрес</h4>
+                                       <span>{{contact.location}}</span>
+                                    </div>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                        <!--mdp-our-contacts end-->
+                     </div>
+                  </div>
+               </div>
+               <!--mdp-contact end-->
+            </div>
+         </section>
+         <!--page-content end-->
+         
+         <!--newsletter-sec end-->
+         {%include 'footer.html'%}
+         <!--footer end-->
+ {%endblock%}

@@ -1,0 +1,75 @@
+{% extends 'homepage.html'%}
+{%load static %}
+{%block content%}
+      <div class="wrapper">
+         {%include 'header.html'%}
+         <!--header end-->
+         {%include 'responsive.html'%}
+         <!--responsive-menu end-->
+         <section class="pager-section">
+            <div class="container">
+               <div class="pager-content text-center">
+                  <h2>Жанылыктар</h2>
+                  <ul>
+                     <li><a href="#" title="">Башкы бет</a></li>
+                     <li><span>Жанылыктар</span></li>
+                  </ul>
+               </div>
+               <!--pager-content end-->
+               <h2 class="page-titlee">Shelly</h2>
+            </div>
+         </section>
+         <!--pager-section end-->
+         <section class="page-content">
+            <div class="container">
+               <div class="row">
+                  <div class="col-lg-9">
+                     <div class="blog-section p-0 posts-page">
+                        <div class="blog-posts">
+                           {%for new in new %}
+                           <div class="blog-post">
+                              <div class="blog-thumbnail"><a href="{% url 'new_post' new.id%}"  title=""><img src="{{new.image.url}}"  width = '100px' alt="" class="w-100"> </a><span class="category">{{new.language}}</span></div>
+                              <div class="blog-info">
+                                 <ul class="meta">
+                                    <li><a href="#" title="">{{new.created_news}}</a></li>
+                                 </ul>
+                                 <h3 class="stick"><a href="{% url 'new_post' new.id%}" title="">{{new.name}}</a></h3>
+                                 <p>{{new.desc}}</p>
+                                 <a href="{% url 'new_post' new.id%}" title="" class="read-more">Толугу менен окуу <i class="fa fa-long-arrow-alt-right"></i></a>
+                              </div>
+                           </div>
+                           {%endfor %}
+                           <!--blog-post end-->
+                           
+                           <!--blog-post end-->
+                          
+                           <!--blog-post end-->
+                        </div>
+                        <!--blog-posts end-->
+                     </div>
+                     <!--blog-section end-->
+                     <div class="mdp-pagiation">
+                        <nav aria-label="Page navigation example">
+                           <ul class="pagination">
+                              <li class="page-item"><a class="page-link" href="#">1</a></li>
+                              <li class="page-item"><a class="page-link active" href="#">2</a></li>
+                              <li class="page-item"><a class="page-link" href="#">3</a></li>
+                              <li class="page-item"><a class="page-link" href="#">4</a></li>
+                              <li class="page-item"><a class="page-link" href="#">...</a></li>
+                              <li class="page-item"><a class="page-link" href="#">15</a></li>
+                           </ul>
+                        </nav>
+                     </div>
+                     <!--pagination-end-->
+                  </div>
+                 
+               </div>
+            </div>
+         </section>
+         <!--page-content end-->
+         
+         <!--newsletter-sec end-->
+         {%include 'footer.html'%}
+         <!--footer end-->
+      </div>
+{%endblock%}

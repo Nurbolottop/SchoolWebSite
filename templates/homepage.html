@@ -1,0 +1,28 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>{{settings.name_site}} Мектеби</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta name="description" content="Shelly - Website">
+      <meta name="author" content="merkulove">
+      <meta name="keywords" content="">
+      <link rel="icon" href="{{settings.logo_site.url}}">
+      <link rel="stylesheet" type="text/css" href="{%static 'assets/css/main.min.css'%}">
+      <link rel="stylesheet" type="text/css" href="{%static 'assets/css/button.min.css'%}">
+   </head>
+   <body>
+    {%block content%}   
+    {%endblock%}
+</div>
+
+<script src="{%static 'assets/js/bundle.min.js'%}"></script>
+{% comment %} <script src="{%static 'assets/js/button.min.js'%}"></script> {% endcomment %}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script>window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+   gtag('config', 'UA-180910402-1');</script>
+</body>
+</html>

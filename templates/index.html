@@ -1,0 +1,177 @@
+{% extends 'homepage.html'%}
+{%load static %}
+{%block content%}
+      <div class="wrapper">
+         <div class="main-section">
+            {%include 'header.html'%}
+            <!--header end-->
+            {%include 'responsive.html'%}_
+            <!--responsive-menu end-->
+            <section class="main-banner">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-lg-7 col-md-7">
+                        <div class="banner-text wow fadeInLeft" data-wow-duration="1000ms">
+                           <h2>{{settings.desc2_site}}</span></h2>
+                           <p>{{settings.desc_site}}</p>
+                        </div>
+                     </div>
+                     <div class="col-lg-5 col-md-5">
+                        <div class="banner-img wow zoomIn" data-wow-duration="1000ms"><img src="{{settings.slide_site.url}}" width ='650px' alt=""></div>
+                        <!--banner-img end-->
+                        <div class="elements-bg wow zoomIn" data-wow-duration="1000ms"></div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--main-banner end-->
+            <h2 style="color:#000 !important;font-size:130px"   class="main-title">{{settings.name_site}}</h2>
+         </div>
+         
+         <section class="about-us-section">
+            <div class="container">
+               <div class="section-title text-center">
+                  <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Биз сандабыз </font><!--</font><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Шелли</font></font></span></h2>-->
+                  
+               </div>
+               <!--section-title end-->
+               <div class="about-sec">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms">
+                              <h3>38</h3>
+                              <p>Лет в школе/p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">
+                              <h3>2500</h3>
+                              <p>Учеников</p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                              <h3>79 </h3>
+                              <p>Выпускников в год</p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                              <h3>5000</h3>
+                              <p>Книг в  библиотеке </p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!--about-rw end-->
+               
+            </div>
+         </section>
+         <!--main-section end-->
+         
+         <section class="about-us-section">
+            <div class="container">
+               
+               <!--section-title end-->
+               <div class="about-sec">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms">
+                              <img src="{%static 'assets/img/icon5.png'%}" alt="">
+                              <h3>{{title.name1}}</h3>
+                              <p>{{title.desc1}}</p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">
+                              <img src="{%static 'assets/img/icon7.png'%}" alt="">
+                              <h3>{{title.name2}}</h3>
+                              <p>{{title.desc2}}</p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+                              <img src="{%static 'assets/img/icon8.png'%}" alt="">
+                              <h3>{{title.name3}}</h3>
+                              <p>{{title.desc3}}</p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6">
+                           <div class="abt-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+                              <img src="{%static 'assets/img/icon9.png'%}" alt="">
+                              <h3>{{title.name4}}</h3>
+                              <p>{{title.desc4}}/p>
+                           </div>
+                           <!--abt-col end-->
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!--about-rw end-->
+               <div class="abt-img">
+                  <ul class="masonary">
+                     <li class="width1 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide1_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide1_site.url}}" alt=""></a></li>
+                     <li class="width2 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide2_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide2_site.url}}" alt=""></a></li>
+                     <li class="width3 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide3_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide3_site.url}}" alt=""></a></li>
+                     <li class="width4 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide4_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide4_site.url}}" alt=""></a></li>
+                     <li class="width5 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide5_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide5_site.url}}" alt=""></a></li>
+                     <li class="width6 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide6_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide6_site.url}}" alt=""></a></li>
+                     <li class="width7 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide7_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide7_site.url}}" alt=""></a></li>
+                     <li class="width8 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide8_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide8_site.url}}" alt=""></a></li>
+                     <li class="width9 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide9_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide9_site.url}}" alt=""></a></li>
+                     <li class="width10 wow zoomIn" data-wow-duration="1000ms"><a href="{{slide.slide10_site.url}}" data-group="set1" title="" class="html5lightbox"><img src="{{slide.slide10_site.url}}" alt=""></a></li>
+                  </ul>
+               </div>
+               <!-- abt-img end-->
+            </div>
+         </section>
+         <!--course-section end-->
+         <section class="blog-section">
+            <div class="container">
+               <div class="section-title text-center">
+                  <h2>Жанылыктар</h2>
+               </div>
+               <!--section-title end-->
+               <div class="blog-posts">
+                  <div class="row">
+                     {%for news in news%}
+                     <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="blog-post">
+                           <div class="blog-thumbnail"><img src="{{news.image.url}}" alt="" class="w-100"> <span class="category">{{news.language}}</span></div>
+                           <div class="blog-info">
+                              <ul class="meta">
+                                 <!--<li><a href="#" title="">17/09/2020</a></li>
+                                 <li><a href="#" title="">by Admin</a></li>-
+                                 <li><img src="{%static 'assets/img/icon13.png'%}" alt=""><a href="#" title="">Teachers,</a><a href="#" title=""> School</a></li>-->
+                              </ul>
+                              <h3><a href="{% url 'new_site'%}" title="">{{news.name}}</a></h3>
+                              <p>{{news.desc}}</p>
+                              <a href="{% url 'new_site'%}" title="" class="read-more">Улантуу <i class="fa fa-long-arrow-alt-right"></i></a>
+                           </div>
+                        </div>
+                        <!--blog-post end-->
+                     </div>
+                     {%endfor%}
+                  </div>
+               </div>
+               <!--blog-posts end-->
+            </div>
+         </section>
+         <!--blog-section end
+      
+         <!--newsletter-sec end-->
+         {%include 'footer.html'%}
+         <!--footer end-->
+{%endblock%}

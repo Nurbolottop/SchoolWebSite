@@ -1,0 +1,103 @@
+{%extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+      <div class="wrapper">
+         {%include 'header.html'%}
+         <!--header end-->
+         {%include 'responsive.html'%}
+         <!--responsive-menu end-->
+         <section class="pager-section">
+            <div class="container">
+               <div class="pager-content text-center">
+                  <h2>{{teacher.name}}</h2>
+                  <ul>
+                     <li><a href="#" title="">Башкы бет</a></li>
+                     <li><a href="#" title="">Мугалим</a></li>
+                  </ul>
+               </div>
+               <!--pager-content end-->
+               <h2 class="page-titlee">{{settings.name_site}}</h2>
+            </div>
+         </section>
+         <!--pager-section end-->
+         <section class="page-content">
+            <div class="container">
+               <div class="teacher-single-page">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="teacher-coly">
+                           <img src="{{teacher.image.url}}" alt="">
+                           <ul class="social-icons">
+                              <li><a href="{{teacher.facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+                              <li><a href="{{teacher.whatsapp}}" title=""><i class="fab fa-whatsapp"></i></a></li>
+                              <li><a href="{{teacher.instagram}}" title=""><i class="fab fa-instagram"></i></a></li>
+                           </ul>
+                        </div>
+                        <!--teacher-coly end-->
+                     </div>
+                     <div class="col-lg-8">
+                        <div class="teacher-content">
+                           <h3>{{teacher.work}}</h3>
+                           <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-6">
+                                 <div class="rol-z">
+                                    <img src="{%static 'assets/img/ro1d'%}" alt="">
+                                    <div class="rol-info">
+                                       <h3>Тел.номери</h3>
+                                       <span>{{teacher.number}}</span>
+                                    </div>
+                                 </div>
+                                 <!--rol-z end-->
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-6">
+                                 <div class="rol-z">
+                                    <img src="{%static 'assets/img/ro2d'%}" alt="">
+                                    <div class="rol-info">
+                                       <h3>Почтасы</h3>
+                                       <span>{{teacher.email}}</span>
+                                    </div>
+                                 </div>
+                                 <!--rol-z end-->
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-6">
+                                 <div class="rol-z style2">
+                                    <img src="{%static 'assets/img/ro3d'%}" alt="">
+                                    <div class="rol-info">
+                                       <h3><a title="">Мугалимге азыр<br>Чалыныз</a></h3>
+                                    </div>
+                                 </div>
+                                 <!--rol-z end-->
+                              </div>
+                           </div>
+                           <p>{{teacher.desc}}</p>
+                           <ul class="tech-detils">
+                              <li>
+                                 <h3>Туулган жылы</h3>
+                                 <span>{{teacher.year}}</span>
+                              </li>
+                              <li>
+                                 <h3>Окууган жери </h3>
+                                 <span>{{teacher.edu}}</span>
+                              </li>
+                              <li>
+                                 <h3>Тажрыйбасы</h3>
+                                 <span>{{teacher.oput}}</span>
+                              </li>
+                           </ul>
+                           <!--tech-detils end-->
+                           
+                        </div>
+                        <!--teacher-content end-->
+                     </div>
+                  </div>
+               </div>
+               <!--teacher-single-page end-->
+               
+            </div>
+         </section>
+         <!--page-content end-->
+         
+         <!--newsletter-sec end-->
+         {%include 'footer.html'%}
+         <!--footer end-->
+{%endblock%}

@@ -1,0 +1,81 @@
+{%load static%}
+<footer>
+    <div class="container">
+       <div class="top-footer">
+          <div class="row">
+             <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="widget widget-about">
+                   <img src="{{settings.logo_site.url}}" width='100px' alt="">
+                   <p>{{settings.desc_site}}</p>
+                </div>
+                <!--widget-about end-->
+             </div>
+             <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="widget widget-contact">
+                   <ul class="contact-add">
+                      <li>
+                         <div class="contact-info">
+                            <img src="{%static 'assets/img/icon1.png'%}" alt="">
+                            <div class="contact-tt">
+                               <h4>Тел.номер</h4>
+                               <span>{{contact.call}}</span>
+                            </div>
+                         </div>
+                         <!--contact-info end-->
+                      </li>
+                      <li>
+                         <div class="contact-info">
+                            <img src="{%static 'assets/img/icon2.png'%}" alt="">
+                            <div class="contact-tt">
+                               <h4>Иш Убактысы</h4>
+                               <span>{{contact.work_site}} {{contact.work2_site}}</span>
+                            </div>
+                         </div>
+                         <!--contact-info end-->
+                      </li>
+                      <li>
+                         <div class="contact-info">
+                            <img src="{%static 'assets/img/icon3.png'%}" alt="">
+                            <div class="contact-tt">
+                               <h4>Адрес</h4>
+                               <span>{{contact.location}}</span>
+                            </div>
+                         </div>
+                         <!--contact-info end-->
+                      </li>
+                   </ul>
+                </div>
+                <!--widget-contact end-->
+             </div>
+             <div class="col-lg-4 col-md-6 col-sm-6">
+                <div class="widget widget-links">
+                   <h3 class="widget-title">Ыкчам шилтемелер</h3>
+                   <ul>
+                      <li><a href="{%url 'about'%}" title="">Биз жонундо</a></li>
+                      <li><a href="{% url 'clase'%}" title="">Биздин класстра</a></li>
+                      <li><a href="{% url 'teacher_site'%}" title="">Мектпе мугалимдер</a></li>
+                      <li><a href="{% url 'new_site'%}" title="">Биздин Жанылыктар</a></li>
+                   </ul>
+                </div>
+                <!--widget-links end-->
+             </div>
+          </div>
+       </div>
+       <!--top-footer end-->
+       <div class="bottom-footer">
+          <div class="row align-items-center">
+             <div class="col-lg-6 col-md-6 col-sm-6">
+                <p>© Copyrights 2022 {{settings.name_site}} Бардык укуктар корголгон</p>
+             </div>
+             <div class="col-lg-6 col-md-6 col-sm-6">
+                <ul class="social-links">
+                   <li><a href="{{contact.facebook_site}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+                   <li><a href="{{contact.youtube_site}}" title=""><i class="fab fa-youtube"></i></a></li>
+                   <li><a href="{{contact.instagram_site}}" title=""><i class="fab fa-instagram"></i></a></li>
+                </ul>
+             </div>
+          </div>
+       </div>
+       <!--bottom-footer end-->
+    </div>
+ </footer>

@@ -1,0 +1,154 @@
+{%extends 'homepage.html'%}
+{%load static%}
+{%block content%}
+      <div class="wrapper">
+         {% include 'header.html' %}
+         <!--header end-->
+         {%include 'responsive.html'%}
+         <!--responsive-menu end-->
+         <section class="pager-section">
+            <div class="container">
+               <div class="pager-content text-center">
+                  <h2> Биз жөнүндө</h2>
+                  <ul>
+                     <li><a href="{%url 'index'%}" title=""><Башкы бет></a></li>
+                     <li><span>Биз жонундо</span></li>
+                  </ul>
+               </div>
+               <!--pager-content end-->
+               <h2 class="page-titlee">{{settings.name_site}}</h2>
+            </div>
+         </section>
+         <!--pager-section end-->
+         <section class="about-page-content">
+            <div class="container">
+               <div class="abt-page-row">
+                  <div class="row align-items-center">
+                     <div class="col-lg-6 col-md-6">
+                        <div class="section-title">
+                           <h2>{{settings.name_site}} мектебине <br><span>Кош -</span> Келиниздер</h2>
+                           <p class="mw-100">{{settings.desc_site}}</p>
+                           <a href="classes.html" title="" class="btn-default">Класстар <i class="fa fa-long-arrow-alt-right"></i></a>
+                        </div>
+                        <!--section-title end-->
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="avt-img"><img src="{{about.slide1.url}}" alt=""></div>
+                        <!--avt-img end-->
+                     </div>
+                  </div>
+                  <div class="row align-items-center">
+                     <div class="col-lg-6 col-md-6">
+                        <div class="avt-img"><img src="{{about.slide2.url}}" alt=""></div>
+                        <!--avt-img end-->   
+                     </div>
+                     <div class="col-lg-6 col-md-6">
+                        <div class="act-inffo">
+                           <span> Биз жөнүндө</span>
+                           <h2>Биздин миссия</h2>
+                           <p>{{about.desc}}</p>
+                           <ul>
+                              <li>{{about.talap1}}</li>
+                              <li>{{about.talap2}}</li>
+                              <li>{{about.talap3}}</li>
+                           </ul>
+                        </div>
+                        <!--act-inffo end-->
+                     </div>
+                  </div>
+               </div>
+               <!--abt-page-row end-->
+            </div>
+         </section>
+         <!--about-page-content end-->
+         <section class="benifit-section">
+            <div class="container">
+               <div class="row align-items-center">
+                  <div class="col-lg-6">
+                     <div class="section-title">
+                        <h2>Биздин артыкчылыктар</h2>
+                        <p>Мыкты жана сапаттуу билим. Окуучуларга жумшак кайрылуу жана окуучуларды колдоо</p>
+                        <a href="contacts.html" title="" class="btn-default">Байланыш <i class="fa fa-long-arrow-alt-right"></i></a>
+                     </div>
+                     <!--section-title end-->
+                  </div>
+                  <div class="col-lg-6">
+                     <div class="about-us-section p-0">
+                        <div class="about-sec">
+                           <div class="row">
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                 <div class="abt-col">
+                                    <img src="{%static 'assets/img/icon5.png'%}" alt="">
+                                    <h3>{{title.name1}}</h3>
+                                    <p>{{title.desc1}}</p>
+                                 </div>
+                                 <!--abt-col end-->
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                 <div class="abt-col">
+                                    <img src="{%static 'assets/img/icon7.png'%}" alt="">
+                                    <h3>{{title.name2}}</h3>
+                                    <p>{{title.desc2}}</p>
+                                 </div>
+                                 <!--abt-col end-->
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                 <div class="abt-col">
+                                    <img src="{%static 'assets/img/icon9.png'%}" alt="">
+                                    <h3>{{title.name3}}</h3>
+                                    <p>{{title.desc3}}</p>
+                                 </div>
+                                 <!--abt-col end-->
+                              </div>
+                              <div class="col-lg-6 col-md-6 col-sm-6">
+                                 <div class="abt-col">
+                                    <img src="{%static 'assets/img/icon8.png'%}" alt="">
+                                    <h3>{{title.name4}}</h3>
+                                    <p>{{title.desc4}}</p>
+                                 </div>
+                                 <!--abt-col end-->
+                              </div>
+                           </div>
+                        </div>
+                        <!--about-rw end-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--benifit-section end-->
+         <section class="classes-section">
+            <div class="container">
+               <div class="sec-title">
+                  <h2 class="no-bg">Биздин сабактар</h2>
+                  <p>Сабактардын тизмеси!</p>
+               </div>
+               <!--sec-title end-->
+               <div class="classes-sec">
+                  <div class="row classes-carousel">
+                    {%for lesson in lesson%}
+                     <div class="col-lg-3">
+                        <div class="classes-col">
+                           <div class="class-thumb"><img src="{{lesson.image.url}}" alt="" class="w-100"></div>
+                           <div class="class-info">
+                              <h3><a  title="">{{lesson.name}}</a></h3>
+                              <div class="d-flex flex-wrap align-items-center">
+                                 <div class="posted-by"><img src="{{lesson.teacher_image.url}}"width ="3z0px" alt=""> <a  title="">{{lesson.teacher}}</a></div>
+                              </div>
+                           </div>
+                        </div>
+                        <!--classes-col end-->
+                     </div>
+                     {%endfor%}
+                     
+                  <div class="lnk-dv text-center"><a href="{% url 'clase' %}" title="" class="btn-default">Класстар <i class="fa fa-long-arrow-alt-right"></i></a></div>
+               </div>
+               <!--classes-sec end-->
+            </div>
+         </section>
+         <!--classes-section end-->
+         
+         <!--newsletter-sec end-->
+         {%include 'footer.html'%}
+         <!--footer end-->
+{%endblock%}
