@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
+
 from apps.settings.views import about, index
 from apps.News.views import new_site,new_post
 from apps.contact.views import contacts
 from apps.teachers.views import teacher_site,teacher_detail
 from apps.classs.views import clase
+from apps. accreditation1.views import accreditations
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name ='index'),
@@ -31,7 +33,8 @@ urlpatterns = [
     path('post/<int:id>/', new_post, name='new_post'),
     path('teachers/', teacher_site, name = 'teacher_site'),
     path('teacher/single/<int:id>/', teacher_detail, name = 'teacher_single' ),
-    path('classess/',clase, name = 'clase' )
+    path('classess/',clase, name = 'clase' ),
+    path('accreditations/', accreditations, name='accreditations')
 
 ]
 urlpatterns +=static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)

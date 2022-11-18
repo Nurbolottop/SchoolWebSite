@@ -2,58 +2,73 @@
 {%load static%}
 {%block content%}
       <div class="wrapper">
-         {%include 'header.html'%}
+         {% include 'header.html'%}
+
          <!--header end-->
          {%include 'responsive.html'%}
          <!--responsive-menu end-->
-         <section class="pager-section blog-version">
-            
+         <section class="pager-section">
             <div class="container">
-              
                <div class="pager-content text-center">
-                
-                  <ul>
-                     <li><a href="{% url 'index'%}" title="">Башкы бет</a></li>
-                     <li><a href="{% url 'new_site'%}" title="">Жанылыктар</a></li>
-                     <li><span>{{new.name}}</span></li>
-                  </ul>
                   <h2>{{new.name}}</h2>
-                  <span class="categry">{{new.language}}</span>
-                  <ul class="meta">
-                     <li><a href="#" title="">{{new.created_news}}</a></li>
-
+                  <ul>
+                     <li><a href="#" title="">Башкы бет</a></li>
+                     <li><a href="#" title="">Мугалим</a></li>
                   </ul>
                </div>
                <!--pager-content end-->
+               <h2 class="page-titlee">{{settings.name_site}}</h2>
             </div>
          </section>
          <!--pager-section end-->
-         <section class="page-content p80">
+         <section class="page-content">
             <div class="container">
-               <div class="row">
-                  <div class="col-lg-8">
-                     <div class="blog-post single">
-                      <img src="{{new.image.url}}"  width = '100px' length ='100px' alt="" class="w-100">
-                      
-                      <p></p>
-                        <div class="pager-content text-center">
-
-                        
+               <div class="teacher-single-page">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="teacher-coly">
+                           <img src="{{new.image.url}}" alt="">
+                           
                         </div>
-                      
-                      <p>{{new.desc}}</p>
-
-
+                        <!--teacher-coly end-->
                      </div>
-                     <!--blog-post single end-->
-                  
-                     <!--mdp-contact end-->
+                     <div class="col-lg-8">
+                        <div class="teacher-content">
+                           <h3>{{new.language}}</h3>
+                           <div class="row">
+                              <div class="col-lg-4 col-md-4 col-sm-6">
+                                 <div class="rol-z">
+                                    <img src="{%static 'assets/img/ro1d'%}" alt="">
+                                    <div class="rol-info">
+                                       <span>{{new.created_news}}
+                                          
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <!--rol-z end-->
+                              </div>
+                              
+                           </div>
+                           <ul class="tech-detils">
+                              <li>
+                                 <span>{{new.desc}} </span>
+                              </li>
+                             
+                           </ul>
+                           <!--tech-detils end-->
+                           
+                        </div>
+                        <!--teacher-content end-->
+                     </div>
                   </div>
-                  
                </div>
+               <!--teacher-single-page end-->
+               
             </div>
          </section>
+         <!--page-content end-->
          
          <!--newsletter-sec end-->
          {%include 'footer.html'%}
+         <!--footer end-->
 {%endblock%}

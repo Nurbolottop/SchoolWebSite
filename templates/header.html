@@ -45,23 +45,20 @@
           <nav>
              <ul>
                 <li><a class="active" href="{% url 'index'%}" title="">Башкы бет</a></li>
-                <li>
-                   <a href="{% url 'about'%}" title="">Биз жөнүндө</a>
-                  
-                </li>
-                <li>
-                   <a href="{%url 'clase'%}" title="">Класстар</a>
-                   
-                </li>
-                <li>
-                   <a href="{% url 'teacher_site'%}" title="">Мугалимдер</a>
-                   
-                </li>
-                <li>
-                   <a href="{% url 'new_site'%}" title="">Жанылыктар</a>
-                   
-                </li>
+                <li><a href="{% url 'about'%}" title="">Биз жөнүндө</a></li>
+                <li><a href="{%url 'clase'%}" title="">Класстар</a></li>
+                <li><a href="{% url 'teacher_site'%}" title="">Мугалимдер</a> </li>
+                <li><a href="{% url 'new_site'%}" title="">Жанылыктар</a></li>
                 <li><a href="{%url 'contacts'%}" title="">Байланыш</a></li>
+                <li>
+                  <a href="about.html" title=""> АККРЕДИТАЦИЯ 2022-2023 </a>
+                  <ul>
+                     <li><a href="{%url 'accreditations'%}" title=""> Институционалдык аккредитация </a></li>
+                     <li><a href="events.html" title="">  Программалык аккредитация  </a></li>
+
+                  </ul>
+               </li>
+
              </ul>
           </nav>
           <!--nav end-->

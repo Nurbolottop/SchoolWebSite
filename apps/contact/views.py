@@ -1,7 +1,8 @@
 from django.shortcuts import render,redirect
+from django.core.mail import send_mail
+    
 from apps.contact.models import Contact,Contact_detail
 from apps.settings.models import Settings
-from django.core.mail import send_mail
 
 # Create your views here.
 def contacts(request):
