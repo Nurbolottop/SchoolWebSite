@@ -33,13 +33,13 @@
                         <!--section-title end-->
                      </div>
                      <div class="col-lg-6 col-md-6">
-                        <div class="avt-img"><img src="{{about.slide1.url}}" alt=""></div>
+                        <div class="avt-img"><img src="{{about.slide1.url}}" width  = '550px' alt=""></div>
                         <!--avt-img end-->
                      </div>
                   </div>
                   <div class="row align-items-center">
                      <div class="col-lg-6 col-md-6">
-                        <div class="avt-img"><img src="{{about.slide2.url}}" width  = '600px' alt=""></div>
+                        <div class="avt-img"><img src="{{about.slide2.url}}" width  = '550px' alt=""></div>
                         <!--avt-img end-->   
                      </div>
                      <div class="col-lg-6 col-md-6">
@@ -68,7 +68,7 @@
                      <div class="section-title">
                         <h2>Биздин артыкчылыктар</h2>
                         <p>Мыкты жана сапаттуу билим. Окуучуларга жумшак кайрылуу жана окуучуларды колдоо</p>
-                        <a href="contacts.html" title="" class="btn-default">Байланыш <i class="fa fa-long-arrow-alt-right"></i></a>
+                        <a href="{% url 'contacts'%}" title="" class="btn-default">Байланыш <i class="fa fa-long-arrow-alt-right"></i></a>
                      </div>
                      <!--section-title end-->
                   </div>
@@ -116,14 +116,14 @@
                </div>
             </div>
          </section>
-         <!--benifit-section end-->
+         <!--benifit-section end
          <section class="classes-section">
             <div class="container">
                <div class="sec-title">
                   <h2 class="no-bg">Биздин сабактар</h2>
                   <p>Сабактардын тизмеси!</p>
                </div>
-               <!--sec-title end-->
+               <!--sec-title end
                <div class="classes-sec">
                   <div class="row classes-carousel">
                     {%for lesson in lesson%}
@@ -137,15 +137,15 @@
                               </div>
                            </div>
                         </div>
-                        <!--classes-col end-->
+                        <!--classes-col end
                      </div>
                      {%endfor%}
                      
                   <div class="lnk-dv text-center"><a href="{% url 'clase' %}" title="" class="btn-default">Класстар <i class="fa fa-long-arrow-alt-right"></i></a></div>
                </div>
-               <!--classes-sec end-->
+               <!--classes-sec end
             </div>
-         </section>
+         </section>-->
          <!--classes-section end-->
          
          <!--newsletter-sec end-->

@@ -1,11 +1,21 @@
 {%load static%}
 <div class="responsive-menu">
     <ul>
-       <li><a href="{% url 'index' %}" title="">Башки бет</a></li>
-       <li><a href="{% url 'about'%}" title="">Биз жонундо</a></li>
-       <li><a href="{% url 'clase'%}" title="">Класстар</a></li>
-       <li><a href="{% url 'teacher_site'%}" title="">Мугалимдер</a></li>
-       <li><a href="{%url 'new_site'%}" title="">Жанылыктар</a></li>
-       <li><a href="{% url 'contacts'%}" title="">Байланыш</a></li>
+       <li><a href="{% url 'index' %}" title="">БАШКЫ БЕТ</a></li>
+       <li><a href="{% url 'about'%}" title="">БИЗ ЖОНУНДО</a></li>
+       <ul>
+         <li><a href="{%url 'accreditations1'%}" title=""> БИЗДИН ЖЕТИШКЕНДИКТЕР </a></li>
+      </ul>
+       <li><a href="{% url 'clase'%}" title="">КЛАССТАР</a></li>
+       <li><a href="{% url 'teacher_site'%}" title="">МУГАЛИМДЕР</a></li>
+       <li><a href="{%url 'new_site'%}" title="">ЖАНЫЛЫКТАР</a></li>
+       <li><a href="{% url 'contacts'%}" title="">БАЙЛАНЫШ</a></li>
+       <li>
+         <a href="{% url 'main_accreditations'%}" title=""> АККРЕДИТАЦИЯ 2022-2023 </a>
+            <ul>
+               <li><a href="{%url 'accreditations1'%}" title=""> ИНСТИТУЦИОНАЛДЫК АККРЕДИТАЦИЯ </a></li>
+               <li><a href="{%url 'accreditations2'%}" title="">  ПРОГРАММАЛЫК АККРЕДИТАЦИЯ  </a></li>
+            </ul>
+       </li>
     </ul>
  </div>

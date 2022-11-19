@@ -12,8 +12,9 @@
                <div class="pager-content text-center">
                   <h2>{{new.name}}</h2>
                   <ul>
-                     <li><a href="#" title="">Башкы бет</a></li>
-                     <li><a href="#" title="">Мугалим</a></li>
+                     <li><a href="{%url 'index'%}" title="">Башкы бет</a></li>
+
+                     <li><a href="{% url 'new_site'%}" title="">Жанылыктар</a></li>
                   </ul>
                </div>
                <!--pager-content end-->
@@ -49,12 +50,12 @@
                               </div>
                               
                            </div>
-                           <ul class="tech-detils">
+                           <div class="tech-detils" >
                               <li>
-                                 <span>{{new.desc}} </span>
+                                 <span style="text-align:center;">{{new.desc}}  </span>
                               </li>
                              
-                           </ul>
+                           </div>
                            <!--tech-detils end-->
                            
                         </div>

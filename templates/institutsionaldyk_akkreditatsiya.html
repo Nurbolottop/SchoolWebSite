@@ -11,7 +11,7 @@
                <div class="pager-content text-center">
                   <h2> Мугалимдер</h2>
                   <ul>
-                     <li><a href="#" title="">Башки бет</a></li>
+                     <li><a href="{% url 'index'%}" title="">Башкы бет</a></li>
                      <li><span> Мугалимдер</span></li>
                   </ul>
                </div>
@@ -25,7 +25,7 @@
                <h1 class="section_title">Институционалдык аккредитация</h1>
                <div class="list" data-align-height="span">
                   {%for accreditation in accreditation%}
-                  <div class = 'adi_block'><span style="height: 182px;"><a href="#" data-toggle="_modal" data-number="0">{{accreditation.name}}</a></span></div>
+                  <div class = 'adi_block'><span style="height: 182px;"><a href="{% url 'accreditations1_detail' accreditation.id %}" data-toggle="_modal" data-number="0">{{accreditation.name}}</a></span></div>
                   {% endfor %}
                <div class="text">
                   <p>&nbsp;</p>

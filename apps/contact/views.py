@@ -12,14 +12,14 @@ def contacts(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         message = request.POST.get('message')
-        cont = Contact_detail.objects.create(name = name,email = email,message = message)
-        cont.save()
+        Contact_detail.objects.create(name = name,email = email,message = message)
         send_mail(
-            'Сообщение от школы',
+            f'{message}',
+
             f'Саламатсызбы {name}, Жообуңуз үчүн рахмат, биз сиз менен жакында байланышабыз.Сиздин билдирүүңүз: {message} Сиздин почтаңыз: {email}',
             "noreply@somehost.local",
-            [email]
-        )
+            [email])
+        
         return redirect('index')
         
     context ={

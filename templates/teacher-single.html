@@ -12,8 +12,9 @@
                <div class="pager-content text-center">
                   <h2>{{teacher.name}}</h2>
                   <ul>
-                     <li><a href="#" title="">Башкы бет</a></li>
-                     <li><a href="#" title="">Мугалим</a></li>
+                     <li><a href="{%url 'index'%}" title="">Башкы бет</a></li>
+
+                     <li><a href="{% url 'teacher_site'%}" title="">Мугалимдер</a></li>
                   </ul>
                </div>
                <!--pager-content end-->

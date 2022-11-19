@@ -8,3 +8,10 @@ class About(models.Model):
     talap1 = models.CharField(max_length=255, verbose_name='Биринчи талап')
     talap2 = models.CharField(max_length=255, verbose_name='Экинчи талап')
     talap3 = models.CharField(max_length=255, verbose_name='Учунчу талап')
+
+    def __str__(self):
+        return self.desc
+
+    class Meta:
+        verbose_name = 'Биз жонундо'
+        verbose_name_plural = 'Биз жонундо'

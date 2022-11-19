@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'apps.classs',
     'apps.about',
     'apps.accreditation1',
-    'apps.accreditation2'
+    'apps.accreditation2',
+    'apps.main_accreditation'
+
 
 ]
 
@@ -111,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ky-ru'
 
 TIME_ZONE = 'UTC'
 

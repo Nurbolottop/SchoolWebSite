@@ -15,3 +15,15 @@ def accreditations1(request):
         'contact':contact
     }
     return render(request, 'institutsionaldyk_akkreditatsiya.html', context)
+
+def accreditation_detail1(request,id):
+    accreditation = AcreditationList1.objects.get(id = id)
+    settings = Settings.objects.latest('id')
+    contact = Contact.objects.latest('id')
+    context = {
+        ''
+        'accreditation':accreditation,
+        'settings':settings,
+        'contact':contact
+    }
+    return render(request, 'institutsionaldyk_akkreditatsiya_detail.html', context)

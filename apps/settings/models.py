@@ -78,30 +78,7 @@ class Slide(models.Model):
         verbose_name_plural = "Слайдтар"
         verbose_name = "Слайдтар"
 
-class Lessons(models.Model):
-    image = models.ImageField(
-        upload_to ='lesson/',
-        verbose_name ="Сабактын суроту"
-    )
-    name = models.CharField(
-        max_length =255,
-        verbose_name = "Сабактын аты"
 
-    )
-    teacher_image =models.ImageField(
-        upload_to ='teacher/',
-        verbose_name ="Мугалимдин суроту"
-    )
-    teacher = models.CharField(
-        max_length =255,
-        verbose_name ="Мугалимдин аты"
-    )
-    def __str__(self):
-        return self.name
-
-    class Meta:
-        verbose_name_plural = "Сабактар"
-        verbose_name = "Сабактар"
 
 class Title(models.Model):
     name1 = models.CharField(

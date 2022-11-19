@@ -18,9 +18,11 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 
-from apps.settings.views import about, index
+from apps.settings.views import index
 
 from apps.News.views import new_site,new_post
+
+from apps. about.views import about
 
 from apps.contact.views import contacts
 
@@ -28,9 +30,12 @@ from apps.teachers.views import teacher_site,teacher_detail
 
 from apps.classs.views import clase
 
-from apps. accreditation1.views import accreditations1
+from apps. accreditation1.views import accreditations1,accreditation_detail1
 
-from apps. accreditation2.views import accreditations2
+from apps. accreditation2.views import accreditations2,accreditation_detail2
+
+from apps. main_accreditation.views import main_accreditations
+
 
 
 urlpatterns = [
@@ -45,6 +50,11 @@ urlpatterns = [
     path('classess/',clase, name = 'clase' ),
     path('institutsionaldyk-akkreditatsiya/', accreditations1, name='accreditations1'),    
     path('programmalyk-akkreditatsiya/', accreditations2, name='accreditations2'),
+    path('main-akkreditatsiya/', main_accreditations, name='main_accreditations'),
+    path('institutsionaldyk-akkreditatsiya_detail/<int:id>/', accreditation_detail1, name = 'accreditations1_detail' ),
+    path('programmalyk-akkreditatsiya_detail/<int:id>/', accreditation_detail2, name = 'accreditations2_detail' ),
+
+
 
     
 

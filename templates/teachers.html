@@ -11,12 +11,13 @@
                <div class="pager-content text-center">
                   <h2> Мугалимдер</h2>
                   <ul>
-                     <li><a href="#" title="">Башки бет</a></li>
+                     <li><a href="{%url 'index'%}" title="">Башкы бет</a></li>
+
                      <li><span> Мугалимдер</span></li>
                   </ul>
                </div>
                <!--pager-content end-->
-               <h2 class="page-titlee">{settings.name_site}</h2>
+               <h2 class="page-titlee">{{settings.name_site}}</h2>
             </div>
          </section>
          <!--pager-section end-->
@@ -30,7 +31,7 @@
                           
                            <div class="teacher">
                               <div class="teacher-img">
-                                 <img src="{{teacher.image.url}}" alt="" class="w-100">
+                                 <img src="{{teacher.image.url}}"   width = '300px' length='300px' alt="" class="w-100">
                                  <div class="sc-div">
                                     <ul>
                                        <li><a href="{{teacher.facebook}}" title=""><i class="fab fa-instagram"></i></a></li>
