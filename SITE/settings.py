@@ -22,12 +22,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*n+j5&a0%pyp_-c4v(re62nsy5ux+ut+muxc&4_4_hh-kgr5m%'
+SECRET_KEY = config.SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['83.222.10.199']
+ALLOWED_HOSTS =  config.ALLOWED_HOSTS
 
 
 # Application definition
@@ -87,11 +87,14 @@ WSGI_APPLICATION = 'SITE.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': config.DATABASE_NAME,
+    'USER': config.DATABSE_USER,
+    'PASSWORD': config.DATABSE_USER_PASSWORD,
+    'HOST': config.DATABSE_HOST,
+    'PORT': config.DATABSE_PORT,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -126,8 +129,8 @@ USE_TZ = True
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'erk1nbaevw2711@gmail.com'
-EMAIL_HOST_PASSWORD = 'mtjhapbtpnvixydv'
+EMAIL_HOST_USER = config.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = config.EMAIL_HOST_PASSWORD
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
