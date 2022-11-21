@@ -53,10 +53,7 @@ urlpatterns = [
     path('main-akkreditatsiya/', main_accreditations, name='main_accreditations'),
     path('institutsionaldyk-akkreditatsiya_detail/<int:id>/', accreditation_detail1, name = 'accreditations1_detail' ),
     path('programmalyk-akkreditatsiya_detail/<int:id>/', accreditation_detail2, name = 'accreditations2_detail' ),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-
-
-    
-
-]
-urlpatterns +=static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns +=static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
