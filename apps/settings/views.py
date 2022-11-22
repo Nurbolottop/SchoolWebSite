@@ -11,6 +11,7 @@ def index(request):
     slide = Slide.objects.latest('id')
     title = Title.objects.latest('id')
     news = New.objects.all()
+    
     context ={
         'settings':settings,
         'contact':contact,
