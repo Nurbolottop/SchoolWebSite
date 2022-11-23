@@ -20,6 +20,7 @@ class AcreditationList1Detail(models.Model):
 
     )
     accreditation_detail = models.FileField(upload_to='accreditation/', verbose_name='Документ файл')
+    
     name = models.CharField(max_length=255, verbose_name='Аты')
     def __str__(self):
         return self.name
