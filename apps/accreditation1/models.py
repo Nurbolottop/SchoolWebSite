@@ -26,5 +26,7 @@ class AcreditationList1Detail(models.Model):
         return self.name
 
     class Meta:
+        ordering = ('id',)
         verbose_name = 'Институциалдык аккредитация болумго киргизуу'
         verbose_name_plural = 'Институциалдык аккредитация болумго киргизуу'
+        
