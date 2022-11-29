@@ -31,12 +31,12 @@ class Teacher(models.Model):
     facebook = models.URLField(
         verbose_name = "Мугалимдин Facebook баракчасы",
         blank=True, null=True,
-        default= '0'
+        default= ''
     )
     instagram  =models.URLField(
         verbose_name ="Мугалимдин Instagram баракчасы",
         blank=True, null=True,
-        default= '0'
+        default= ''
     )
     whatsapp = models.URLField(
         verbose_name = "Мугалимдин WhatsApp баракчасы",
