@@ -39,7 +39,7 @@ class Teacher(models.Model):
         default= ''
     )
     whatsapp = models.URLField(
-        verbose_name = "Мугалимдин WhatsApp баракчасы",
+        verbose_name = "Мугалимдин Youtube баракчасы",
         blank=True, null=True,
         default= ''
     )
