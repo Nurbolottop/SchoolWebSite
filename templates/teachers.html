@@ -34,9 +34,15 @@
                                  <img src="{{teacher.image.url}}"   width = '300px' length='300px' alt="" class="w-100">
                                  <div class="sc-div">
                                     <ul>
-                                       <li><a href="{{teacher.facebook}}" title=""><i class="fab fa-instagram"></i></a></li>
+                                       {%if teacher.facebook%}
+                                       <li><a href="{{teacher.facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+                                       {%endif%}
+                                       {%if teacher.whatsapp%}
                                        <li><a href="{{teacher.whatsapp}}" title=""><i class="fab fa-whatsapp"></i></a></li>
-                                       <li><a href="{{teacher.instagram}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+                                       {%endif%}
+                                       {%if teacher.instagram%}
+                                       <li><a href="{{teacher.instagram}}" title=""><i class="fab fa-instagram"></i></a></li>
+                                       {%endif%}
                                     </ul>
                                     <span><img src="{%static 'assets/img/plus.png'%}" alt=""></span>
                                  </div>
