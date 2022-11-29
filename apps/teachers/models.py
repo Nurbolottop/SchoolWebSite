@@ -29,13 +29,19 @@ class Teacher(models.Model):
     email = models.CharField(max_length =255, verbose_name ="Мугалимдин почтасы")
 
     facebook = models.URLField(
-        verbose_name = "Мугалимдин Facebook баракчасы"
+        verbose_name = "Мугалимдин Facebook баракчасы",
+        blank=True, null=True,
+        default= '0'
     )
     instagram  =models.URLField(
-        verbose_name ="Мугалимдин Instagram баракчасы"
+        verbose_name ="Мугалимдин Instagram баракчасы",
+        blank=True, null=True,
+        default= '0'
     )
     whatsapp = models.URLField(
-        verbose_name = "Мугалимдин WhatsApp баракчасы"
+        verbose_name = "Мугалимдин WhatsApp баракчасы",
+        blank=True, null=True,
+        default= '0'
     )
     
     def __str__(self):
