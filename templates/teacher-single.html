@@ -30,9 +30,15 @@
                         <div class="teacher-coly">
                            <img src="{{teacher.image.url}}" alt="">
                            <ul class="social-icons">
+                              {%if teacher.facebook%}
                               <li><a href="{{teacher.facebook}}" title=""><i class="fab fa-facebook-f"></i></a></li>
+                              {%endif%}
+                              {%if teacher.whatsapp%}
                               <li><a href="{{teacher.whatsapp}}" title=""><i class="fab fa-whatsapp"></i></a></li>
+                              {%endif%}
+                              {%if teacher.instagram%}
                               <li><a href="{{teacher.instagram}}" title=""><i class="fab fa-instagram"></i></a></li>
+                              {%endif%}
                            </ul>
                         </div>
                         <!--teacher-coly end-->
