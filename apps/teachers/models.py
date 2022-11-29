@@ -41,7 +41,7 @@ class Teacher(models.Model):
     whatsapp = models.URLField(
         verbose_name = "Мугалимдин WhatsApp баракчасы",
         blank=True, null=True,
-        default= '0'
+        default= ''
     )
     
     def __str__(self):
